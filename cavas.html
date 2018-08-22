@@ -1,0 +1,72 @@
+<html>
+<head>
+  <script src = "act.js"> </script>
+  <script src = "jumper.js"> </script>
+</head>
+<body>
+
+<canvas id = mycvs width = 400, height = 400>
+</canvas>
+<div id = msgview > </div>
+
+</body>
+</html>
+
+<script>
+
+document.body.onload = function(){
+  jumper.init_cvs(mycvs)
+  jumper.init_character()
+  jumper.run()
+  jumper.ondmsg = function(msg){
+    msgview.innerHTML = msg
+  }
+}
+
+
+/*
+
+var cvs = new anicanvas(mycvs)
+
+function state(obj){
+  // if obj is under ground
+
+
+
+}
+
+cvs.addimgobj("obj","man.png",{
+  x: 10,
+  y: 10,
+  vx: 0.5,
+  vy: 0.3,
+  scale:0.03
+})
+
+
+cvs.ontick = function(){
+  var obj = this.objects["obj"]
+  if( obj === undefined ) return
+  var h = obj.src.height * obj.scale
+  obj.vy += 0.1
+  if(obj.y > this.canvas.height - h) obj.vy *= -0.5
+
+}
+
+
+cvs.update()
+
+*/
+
+</script>
+
+<style type = text/css>
+
+canvas {
+	width:400px;
+	height:400px;
+	background-color:gray;
+}
+
+
+</style>
